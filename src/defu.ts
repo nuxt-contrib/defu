@@ -30,7 +30,9 @@ function _defu<T>(
     }
 
     if (Array.isArray(value) && Array.isArray(object[key])) {
-      object[key] = [...value, ...object[key]];
+      object[key] = [...value, ...object[key]].filter((el, idx, arr) => {
+        return arr.indexOf(el) === idx
+      });
     } else if (isPlainObject(value) && isPlainObject(object[key])) {
       object[key] = _defu(
         value,

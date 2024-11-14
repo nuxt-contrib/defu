@@ -39,6 +39,14 @@ describe("defu", () => {
     expectTypeOf(result).toMatchTypeOf<{ array: string[] }>();
   });
 
+  it("should merge arrays without duplicates", () => {
+    const result = defu({ array: ["a", "b"] }, { array: ["c", "d", "a"] });
+    expect(result).toEqual({
+      array: ["a", "b", "c", "d"],
+    });
+    expectTypeOf(result).toMatchTypeOf<{ array: string[] }>();
+  })
+
   it("should correctly type differing array values", () => {
     const item1 = { name: "Name", age: 21 };
     const item2 = { name: "Name", age: "42" };
