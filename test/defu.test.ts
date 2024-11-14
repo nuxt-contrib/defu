@@ -45,7 +45,7 @@ describe("defu", () => {
       array: ["a", "b", "c", "d"],
     });
     expectTypeOf(result).toMatchTypeOf<{ array: string[] }>();
-  })
+  });
 
   it("should correctly type differing array values", () => {
     const item1 = { name: "Name", age: 21 };
