@@ -21,8 +21,8 @@ devDependencies:
     specifier: ^0.2.1
     version: 0.2.1(eslint@8.56.0)(typescript@5.3.3)
   expect-type:
-    specifier: ^0.17.3
-    version: 0.17.3
+    specifier: ^1.1.0
+    version: 1.1.0
   prettier:
     specifier: ^3.1.1
     version: 3.1.1
@@ -2273,8 +2273,8 @@ packages:
       strip-final-newline: 3.0.0
     dev: true
 
-  /expect-type@0.17.3:
-    resolution: {integrity: sha512-K0ZdZJ97jiAtaOwhEHHz/f0N6Xbj5reRz5g6+5BO7+OvqQ7PMQz0/c8bFSJs1zPotNJL5HJaC6t6lGPEAtGyOw==}
+  /expect-type@1.1.0:
+    resolution: {integrity: sha512-bFi65yM+xZgk+u/KRIpekdSYkTB5W1pEf0Lt8Q8Msh7b+eQ7LXVtIB1Bkm4fvclDEL1b2CZkMhv2mOeF8tMdkA==}
     engines: {node: '>=12.0.0'}
     dev: true
 
