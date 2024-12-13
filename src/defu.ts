@@ -49,8 +49,13 @@ function _defu<T>(
 // Create defu wrapper with optional merger and multi arg support
 export function createDefu(merger?: Merger): DefuFunction {
   return (...arguments_) =>
-    // eslint-disable-next-line unicorn/no-array-reduce
-    arguments_.reduce((p, c) => _defu(p, c, "", merger), {} as any);
+    _defu(
+      arguments_[0],
+      // eslint-disable-next-line unicorn/no-array-reduce
+      arguments_.slice(1).reduce((p, c) => _defu(p, c, "", merger), {} as any),
+      "",
+      merger,
+    ) as any;
 }
 
 // Standard version
